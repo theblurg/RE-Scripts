@@ -22,7 +22,7 @@ def removeRedundantCharacter(buffString):
 
 def getIOC(buffString):
 	obj = re.search('(http\S+)', buffString, 0)
-	return obj.group()
+	return obj.group().split('\\')[0].split('\"')[0]
 
 
 
